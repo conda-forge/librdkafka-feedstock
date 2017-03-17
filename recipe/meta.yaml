@@ -1,7 +1,7 @@
 {% set name = "librdkafka" %}
-{% set version = "0.9.3" %}
-{% set sha256 = "745ead036f0d5b732e1cd035a1f31fc23665f2982bf9d799742034e0a1bd0be9" %}
-{% set build = 1 %}
+{% set version = "0.9.4" %}
+{% set sha256 = "5007ad20a6753f709803e72c5f2c09483dcbce0f16b94b17cf677fb3e6045907" %}
+{% set build = 0 %}
 
 package:
   name: {{ name }}
