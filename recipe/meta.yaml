@@ -1,7 +1,7 @@
 {% set name = "librdkafka" %}
 {% set version = "0.9.3" %}
 {% set sha256 = "745ead036f0d5b732e1cd035a1f31fc23665f2982bf9d799742034e0a1bd0be9" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: {{ name }}
@@ -18,15 +18,16 @@ build:
 
 requirements:
   build:
+    - toolchain  # [unix]
     - zlib 1.2.*
     - openssl 1.0.*
     - libgsasl  # [not osx]
-    - lz4
+    - lz4-c
   run:
     - zlib 1.2.*
     - openssl 1.0.*
     - libgsasl  # [not osx]
-    - lz4
+    - lz4-c
 
 test:
   commands:
@@ -34,6 +35,9 @@ test:
     - test -f ${PREFIX}/lib/librdkafka++.so  # [linux]
     - test -f ${PREFIX}/lib/librdkafka.dylib  # [osx]
     - test -f ${PREFIX}/lib/librdkafka++.dylib  # [osx]
+
+    - conda inspect linkages {{ name }}  # [unix]
+    - conda inspect objects {{ name }}   # [osx]
 
 about:
   home: https://github.com/edenhill/librdkafka
