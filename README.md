@@ -19,14 +19,16 @@ consumer.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/librdkafka-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/librdkafka-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/librdkafka-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/librdkafka-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/librdkafka-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/librdkafka-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/librdkafka-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/librdkafka-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/librdkafka/badges/version.svg)](https://anaconda.org/conda-forge/librdkafka)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/librdkafka/badges/downloads.svg)](https://anaconda.org/conda-forge/librdkafka)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-librdkafka-green.svg)](https://anaconda.org/conda-forge/librdkafka) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/librdkafka.svg)](https://anaconda.org/conda-forge/librdkafka) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/librdkafka.svg)](https://anaconda.org/conda-forge/librdkafka) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/librdkafka.svg)](https://anaconda.org/conda-forge/librdkafka) |
 
 Installing librdkafka
 =====================
