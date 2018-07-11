@@ -1,7 +1,6 @@
 {% set name = "librdkafka" %}
 {% set version = "0.11.4" %}
 {% set sha256 = "9d8f1eb7b0e29e9ab1168347c939cb7ae5dff00a39cef99e7ef033fd8f92737c" %}
-{% set build = 0 %}
 
 package:
   name: {{ name }}
@@ -18,23 +17,23 @@ build:
 
 requirements:
   build:
-    - toolchain  # [unix]
-    - zlib 1.2.*
-    - openssl 1.0.*
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - zlib
+    - openssl
     - libgsasl  # [not osx]
     - lz4-c
   run:
-    - zlib 1.2.*
-    - openssl 1.0.*
+    - zlib
+    - openssl
     - libgsasl  # [not osx]
     - lz4-c
 
 test:
   commands:
-    - test -f ${PREFIX}/lib/librdkafka.so  # [linux]
-    - test -f ${PREFIX}/lib/librdkafka++.so  # [linux]
-    - test -f ${PREFIX}/lib/librdkafka.dylib  # [osx]
-    - test -f ${PREFIX}/lib/librdkafka++.dylib  # [osx]
+    - test -f ${PREFIX}/lib/librdkafka${SHLIB_EXT}  # [not win]
+    - test -f ${PREFIX}/lib/librdkafka++${SHLIB_EXT}  # [not win]
 
     - conda inspect linkages {{ name }}  # [unix]
     - conda inspect objects {{ name }}   # [osx]
