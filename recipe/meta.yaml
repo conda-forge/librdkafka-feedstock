@@ -18,14 +18,16 @@ build:
 
 requirements:
   build:
-    - toolchain  # [unix]
-    - zlib 1.2.*
-    - openssl 1.0.*
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - zlib
+    - openssl
     - libgsasl  # [not osx]
     - lz4-c
   run:
-    - zlib 1.2.*
-    - openssl 1.0.*
+    - zlib
+    - openssl
     - libgsasl  # [not osx]
     - lz4-c
 
