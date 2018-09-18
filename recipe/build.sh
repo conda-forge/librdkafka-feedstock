@@ -2,7 +2,7 @@
 
 export CFLAGS="${CFLAGS} -I${PREFIX}/include"
 export CXXFLAGS="${CXXFLAGS} -I${PREFIX}/include"
-export CPPFLAGS="${CXXFLAGS}"
+export CPPFLAGS="${CPPFLAGS} ${CFLAGS}"
 export LDFLAGS="${LDFLAGS} -Wl,-rpath,${PREFIX}/lib -L${PREFIX}/lib"
 
 ./configure --prefix=$PREFIX
