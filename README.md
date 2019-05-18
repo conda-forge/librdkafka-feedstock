@@ -154,4 +154,5 @@ Feedstock Maintainers
 =====================
 
 * [@kwilcox](https://github.com/kwilcox/)
+* [@stuarteberg](https://github.com/stuarteberg/)
 
