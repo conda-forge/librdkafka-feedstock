@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -23,11 +23,13 @@ requirements:
     - zlib
     - openssl
     - libgsasl  # [not osx]
+    - cyrus-sasl
     - lz4-c
   run:
     - zlib
     - openssl
     - libgsasl  # [not osx]
+    - cyrus-sasl
     - lz4-c
 
 test:
