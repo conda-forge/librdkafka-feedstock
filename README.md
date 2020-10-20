@@ -5,7 +5,7 @@ Home: https://github.com/edenhill/librdkafka
 
 Package license: BSD-2-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/librdkafka-feedstock/blob/master/LICENSE.txt)
 
 Summary: The Apache Kafka C/C++ client library
 
