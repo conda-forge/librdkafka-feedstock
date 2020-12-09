@@ -1,6 +1,6 @@
 {% set name = "librdkafka" %}
-{% set version = "1.5.2" %}
-{% set sha256 = "ca3db90d04ef81ca791e55e9eed67e004b547b7adedf11df6c24ac377d4840c6" %}
+{% set version = "1.5.3" %}
+{% set sha256 = "2105ca01fef5beca10c9f010bc50342b15d5ce6b73b2489b012e6d09a008b7bf" %}
 
 package:
   name: {{ name }}
@@ -39,8 +39,6 @@ test:
     - test -f ${PREFIX}/lib/librdkafka${SHLIB_EXT}  # [not win]
     - test -f ${PREFIX}/lib/librdkafka++${SHLIB_EXT}  # [not win]
 
-    - conda inspect linkages {{ name }}  # [unix]
-    - conda inspect objects {{ name }}   # [osx]
 
 about:
   home: https://github.com/edenhill/librdkafka
