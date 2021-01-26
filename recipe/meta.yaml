@@ -1,6 +1,6 @@
 {% set name = "librdkafka" %}
-{% set version = "1.5.3" %}
-{% set sha256 = "2105ca01fef5beca10c9f010bc50342b15d5ce6b73b2489b012e6d09a008b7bf" %}
+{% set version = "1.6.0" %}
+{% set sha256 = "3130cbd391ef683dc9acf9f83fe82ff93b8730a1a34d0518e93c250929be9f6b" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage("librdkafka", max_pin="x.x") }}
