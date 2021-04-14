@@ -12,8 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  skip: true  # [win]
+  number: 1
   run_exports:
     - {{ pin_subpackage("librdkafka", max_pin="x.x") }}
 
@@ -21,16 +20,19 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - ninja  # [win]
+    - cmake >=3.2.0  # [win]
+
   host:
     - zlib
     - openssl
-    - libgsasl  # [not osx]
+    - libgsasl  # [linux]
     - cyrus-sasl
     - lz4-c
   run:
     - zlib
     - openssl
-    - libgsasl  # [not osx]
+    - libgsasl  # [linux]
     - cyrus-sasl
     - lz4-c
 
@@ -38,7 +40,8 @@ test:
   commands:
     - test -f ${PREFIX}/lib/librdkafka${SHLIB_EXT}  # [not win]
     - test -f ${PREFIX}/lib/librdkafka++${SHLIB_EXT}  # [not win]
-
+    - if not exist %LIBRARY_LIB%\\rdkafka.lib exit 1  # [win]
+    - if not exist %LIBRARY_LIB%\\rdkafka++.lib exit 1  # [win]
 
 about:
   home: https://github.com/edenhill/librdkafka
