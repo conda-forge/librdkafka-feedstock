@@ -4,7 +4,7 @@
 
 package:
   name: {{ name }}
-  version: {{ version }}
+  version: {{ version|replace("-POST",".post") }}
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
