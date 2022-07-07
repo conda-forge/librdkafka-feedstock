@@ -27,14 +27,14 @@ requirements:
   host:
     - zlib
     - openssl
-    - libcurl  # [not win]
+    - libcurl
     - libgsasl  # [linux]
     - cyrus-sasl
     - lz4-c
   run:
     - zlib
     - openssl
-    - libcurl  # [not win]
+    - libcurl
     - libgsasl  # [linux]
     - cyrus-sasl
     - lz4-c
