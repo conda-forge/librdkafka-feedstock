@@ -1,0 +1,15 @@
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 33b3ced1..31783569 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -200,6 +200,10 @@ if(WITH_HDRHISTOGRAM)
+   target_link_libraries(rdkafka PUBLIC m)
+ endif()
+ 
++if(WITH_CURL)
++    target_link_libraries(rdkafka PRIVATE ${CURL_LIBRARIES})
++endif()
++
+ if(WITH_ZLIB)
+   find_package(ZLIB REQUIRED)
+   target_include_directories(rdkafka PRIVATE ${ZLIB_INCLUDE_DIRS})
