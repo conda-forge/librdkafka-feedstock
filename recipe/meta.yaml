@@ -14,7 +14,7 @@ source:
     - fix-cmake.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage("librdkafka", max_pin="x.x") }}
 
@@ -28,6 +28,7 @@ requirements:
 
   host:
     - zlib
+    - zstd
     - openssl
     - libcurl
     - libgsasl  # [linux]
@@ -35,6 +36,7 @@ requirements:
     - lz4-c
   run:
     - zlib
+    - zstd
     - openssl
     - libcurl
     - libgsasl  # [linux]
