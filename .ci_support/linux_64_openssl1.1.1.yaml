@@ -20,11 +20,6 @@ lz4_c:
 - 1.9.3
 openssl:
 - 1.1.1
-pin_run_as_build:
-  libcurl:
-    max_pin: x
-  zlib:
-    max_pin: x.x
 target_platform:
 - linux-64
 zip_keys:
@@ -32,3 +27,5 @@ zip_keys:
   - cxx_compiler_version
 zlib:
 - '1.2'
+zstd:
+- '1.5'
