@@ -1,6 +1,6 @@
 {% set name = "librdkafka" %}
-{% set version = "1.9.2" %}
-{% set sha256 = "3fba157a9f80a0889c982acdd44608be8a46142270a389008b22d921be1198ad" %}
+{% set version = "2.0.0-tst4" %}
+{% set sha256 = "5da0e1f7a5d6097ae3ccef4963a80da89d11fa5c796c4ae2b352298195853f9a" %}
 
 package:
   name: {{ name }}
@@ -14,7 +14,7 @@ source:
     - fix-cmake.patch  # [win]
 
 build:
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage("librdkafka", max_pin="x.x") }}
 
