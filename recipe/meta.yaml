@@ -34,7 +34,6 @@ requirements:
     - cyrus-sasl
     - lz4-c
   run:
-    - zlib
     - zstd
     - openssl
     - libcurl
