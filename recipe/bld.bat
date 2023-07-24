@@ -8,6 +8,7 @@ cmake ^
   -DWITH_SNAPPY=ON ^
   -DWITH_ZLIB=ON ^
   -DWITH_CURL=ON ^
+  -DRDKAFKA_BUILD_EXAMPLES=OFF ^
   -GNinja ^
   ..
 
