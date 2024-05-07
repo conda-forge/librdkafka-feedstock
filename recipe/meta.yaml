@@ -1,6 +1,6 @@
 {% set name = "librdkafka" %}
-{% set version = "2.3.0" %}
-{% set sha256 = "2d49c35c77eeb3d42fa61c43757fcbb6a206daa560247154e60642bcdcc14d12" %}
+{% set version = "2.4.0" %}
+{% set sha256 = "d645e47d961db47f1ead29652606a502bdd2a880c85c1e060e94eea040f1a19a" %}
 
 package:
   name: {{ name }}
@@ -21,6 +21,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - ninja  # [win]
     - cmake >=3.2.0  # [win]

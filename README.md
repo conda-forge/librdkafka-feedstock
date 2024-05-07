@@ -206,5 +206,6 @@ Feedstock Maintainers
 
 * [@StephenSmith25](https://github.com/StephenSmith25/)
 * [@kwilcox](https://github.com/kwilcox/)
+* [@lpsinger](https://github.com/lpsinger/)
 * [@stuarteberg](https://github.com/stuarteberg/)
 
