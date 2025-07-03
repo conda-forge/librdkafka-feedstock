@@ -209,6 +209,3 @@ Feedstock Maintainers
 * [@lpsinger](https://github.com/lpsinger/)
 * [@stuarteberg](https://github.com/stuarteberg/)
 
-
-<!-- dummy commit to enable rerendering -->
-
