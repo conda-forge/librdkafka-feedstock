@@ -1,0 +1,27 @@
+From 216f61accd0ca1cfed81292db90a8d72966cd904 Mon Sep 17 00:00:00 2001
+From: Leo Singer <leo.singer@ligo.org>
+Date: Mon, 5 Jan 2026 10:22:02 -0500
+Subject: [PATCH] Conditionally include sys/random.h based on HAVE_GETENTROPY
+
+This fixes Conda build errors on Linux aarch64 and ppc64. See, for
+example, https://dev.azure.com/conda-forge/feedstock-builds/_build/results?buildId=1429288&view=logs&j=60238c3a-ba84-5ca5-39dc-717fbb421dbc&t=9cf66154-4ecc-5714-a3ee-b77d4233a250
+---
+ src/rdrand.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/rdrand.c b/src/rdrand.c
+index 77d02cfc..64ddfc9f 100644
+--- a/src/rdrand.c
++++ b/src/rdrand.c
+@@ -31,7 +31,7 @@
+ #include "rdtime.h"
+ #include "tinycthread.h"
+ #include "rdmurmur2.h"
+-#ifndef _WIN32
++#if HAVE_GETENTROPY
+ /* getentropy() can be present in one of these two */
+ #include <unistd.h>
+ #include <sys/random.h>
+-- 
+2.52.0
+

@@ -1,6 +1,6 @@
 {% set name = "librdkafka" %}
-{% set version = "2.12.1" %}
-{% set sha256 = "ec103fa05cb0f251e375f6ea0b6112cfc9d0acd977dc5b69fdc54242ba38a16f" %}
+{% set version = "2.13.0" %}
+{% set sha256 = "3bd351601d8ebcbc99b9a1316cae1b83b00edbcf9411c34287edf1791c507600" %}
 
 package:
   name: {{ name }}
@@ -8,10 +8,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/edenhill/{{ name }}/archive/v{{ version }}.tar.gz
+  url: https://github.com/confluentinc/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
     - fix-cmake.patch  # [win]
+    - 0001-Conditionally-include-sys-random.h-based-on-HAVE_GET.patch
 
 build:
   number: 0
@@ -49,7 +50,7 @@ test:
     - if not exist %LIBRARY_LIB%\\rdkafka++.lib exit 1  # [win]
 
 about:
-  home: https://github.com/edenhill/librdkafka
+  home: https://github.com/confluentinc/librdkafka
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE
