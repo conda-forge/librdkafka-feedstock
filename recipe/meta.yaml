@@ -12,7 +12,6 @@ source:
   sha256: {{ sha256 }}
   patches:
     - fix-cmake.patch  # [win]
-    - 0001-Conditionally-include-sys-random.h-based-on-HAVE_GET.patch
 
 build:
   number: 0
