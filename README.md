@@ -3,7 +3,7 @@ About librdkafka-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/librdkafka-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/edenhill/librdkafka
+Home: https://github.com/confluentinc/librdkafka
 
 Package license: BSD-2-Clause
 
