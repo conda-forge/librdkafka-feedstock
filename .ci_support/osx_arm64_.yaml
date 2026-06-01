@@ -21,7 +21,7 @@ cxx_compiler_version:
 libcurl:
 - '8'
 librdkafka:
-- '2.12'
+- '2.13'
 lz4_c:
 - '1.10'
 macos_machine:
