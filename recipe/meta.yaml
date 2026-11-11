@@ -14,7 +14,7 @@ source:
     - fix-cmake.patch  # [win]
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage("librdkafka", max_pin="x.x") }}
 
