@@ -21,7 +21,7 @@ docker_image:
 libcurl:
 - '8'
 librdkafka:
-- '2.15'
+- '2.16'
 lz4_c:
 - '1.11'
 openssl:
@@ -34,4 +34,4 @@ zip_keys:
 zlib:
 - '1'
 zstd:
-- '1.5'
+- '1.6'

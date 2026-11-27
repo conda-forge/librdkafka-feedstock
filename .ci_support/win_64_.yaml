@@ -1,5 +1,7 @@
 c_compiler:
-- vs2022
+- vs
+c_compiler_version:
+- '2022'
 c_stdlib:
 - vs
 channel_sources:
@@ -7,11 +9,13 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2022
+- vs
+cxx_compiler_version:
+- '2022'
 libcurl:
 - '8'
 librdkafka:
-- '2.15'
+- '2.16'
 lz4_c:
 - '1.11'
 openssl:
@@ -21,4 +25,4 @@ target_platform:
 zlib:
 - '1'
 zstd:
-- '1.5'
+- '1.6'
